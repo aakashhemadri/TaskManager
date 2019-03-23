@@ -66,20 +66,20 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.pCPU = new System.Diagnostics.PerformanceCounter();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -89,8 +89,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -311,91 +311,17 @@
             this.splitContainer1.SplitterDistance = 136;
             this.splitContainer1.TabIndex = 0;
             // 
-            // button1
+            // button6
             // 
-            this.button1.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(0, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "CPU";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.Black;
-            this.tabPage5.ForeColor = System.Drawing.Color.Aquamarine;
-            this.tabPage5.Location = new System.Drawing.Point(4, 26);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(632, 329);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "App history";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Black;
-            this.tabPage3.ForeColor = System.Drawing.Color.Aquamarine;
-            this.tabPage3.Location = new System.Drawing.Point(4, 26);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(632, 329);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Startup";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.Black;
-            this.tabPage4.ForeColor = System.Drawing.Color.Aquamarine;
-            this.tabPage4.Location = new System.Drawing.Point(4, 26);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(632, 329);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Users";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.Black;
-            this.tabPage6.ForeColor = System.Drawing.Color.Aquamarine;
-            this.tabPage6.Location = new System.Drawing.Point(4, 26);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(632, 329);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Details";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.Black;
-            this.tabPage7.ForeColor = System.Drawing.Color.Aquamarine;
-            this.tabPage7.Location = new System.Drawing.Point(4, 26);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(632, 329);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Services";
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(-1, 70);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 71);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Memory";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(0, 138);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 71);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Disk";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button6.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button6.Location = new System.Drawing.Point(0, 342);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(138, 71);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "GPU";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -421,27 +347,41 @@
             this.button5.Text = "Wi-Fi";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // button3
             // 
-            this.button6.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(0, 342);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 71);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "GPU";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button3.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(0, 138);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(138, 71);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Disk";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // pCPU
+            // button2
             // 
-            this.pCPU.CategoryName = "Processor";
-            this.pCPU.CounterName = "% Processor Time";
-            this.pCPU.InstanceName = "_Total";
+            this.button2.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(-1, 70);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 71);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Memory";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // timer1
+            // button1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.button1.BackgroundImage = global::TaskManager.Properties.Resources.cpu1;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(0, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 71);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "CPU";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // chart1
             // 
@@ -455,14 +395,82 @@
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.LightSeaGreen};
+            series1.BackImageTransparentColor = System.Drawing.Color.Black;
+            series1.BackSecondaryColor = System.Drawing.Color.Black;
+            series1.BorderColor = System.Drawing.Color.Black;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Teal;
+            series1.IsVisibleInLegend = false;
+            series1.IsXValueIndexed = true;
             series1.Legend = "Legend1";
             series1.Name = "CPU";
+            series1.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(521, 273);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.Black;
+            this.tabPage5.ForeColor = System.Drawing.Color.Aquamarine;
+            this.tabPage5.Location = new System.Drawing.Point(4, 26);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(673, 419);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "App history";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.Black;
+            this.tabPage3.ForeColor = System.Drawing.Color.Aquamarine;
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(673, 419);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Startup";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Black;
+            this.tabPage4.ForeColor = System.Drawing.Color.Aquamarine;
+            this.tabPage4.Location = new System.Drawing.Point(4, 26);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(673, 419);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Users";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.Black;
+            this.tabPage6.ForeColor = System.Drawing.Color.Aquamarine;
+            this.tabPage6.Location = new System.Drawing.Point(4, 26);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(673, 419);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Details";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.Black;
+            this.tabPage7.ForeColor = System.Drawing.Color.Aquamarine;
+            this.tabPage7.Location = new System.Drawing.Point(4, 26);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(673, 419);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Services";
+            // 
+            // pCPU
+            // 
+            this.pCPU.CategoryName = "Processor";
+            this.pCPU.CounterName = "% Processor Time";
+            this.pCPU.InstanceName = "_Total";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -492,8 +500,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
