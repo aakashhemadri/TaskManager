@@ -181,6 +181,12 @@ namespace TaskManager
         {
             InitializeComponent();
         }
+
+        private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
         private void MainWindow_Load(object sender, EventArgs e)
         {
             mcname = ".";
