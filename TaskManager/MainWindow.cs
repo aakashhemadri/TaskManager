@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections;
 using System.Diagnostics;
 using System.Windows.Forms;
@@ -20,7 +14,7 @@ namespace TaskManager
         public System.Threading.Timer t = null;
         public System.Threading.Timer tclr = null;
         public bool erroccured = false;
-        private System.Windows.Forms.MenuItem menuItem17;
+        private System.Windows.Forms.MenuItem menuItem17 = null;
         public Hashtable presentprocdetails;
         public Process[] processes = null;
         #endregion
@@ -43,7 +37,7 @@ namespace TaskManager
             {
                 try
                 {
-                    string[] prcdetails = new string[] { p.ProcessName, p.Id.ToString(), p.StartTime.ToShortTimeString(), p.TotalProcessorTime.Duration().Hours.ToString() + ":" + p.TotalProcessorTime.Duration().Minutes.ToString() + ":" + p.TotalProcessorTime.Duration().Seconds.ToString(), (p.WorkingSet / 1024).ToString() + "k", (p.PeakWorkingSet / 1024).ToString() + "k", p.HandleCount.ToString(), p.Threads.Count.ToString() };
+                    string[] prcdetails = new string[] { p.ProcessName, p.Id.ToString(), p.StartTime.ToShortTimeString(), p.TotalProcessorTime.Duration().Hours.ToString() + ":" + p.TotalProcessorTime.Duration().Minutes.ToString() + ":" + p.TotalProcessorTime.Duration().Seconds.ToString(), (p.WorkingSet64 / 1024).ToString() + "k", (p.PeakWorkingSet64 / 1024).ToString() + "k", p.HandleCount.ToString(), p.Threads.Count.ToString() };
                     ListViewItem proc = new ListViewItem(prcdetails);
                     metroListView1.Items.Add(proc);
                     threadscount += p.Threads.Count;
@@ -66,7 +60,7 @@ namespace TaskManager
                 {
                     try
                     {
-                        string[] prcdetails = new string[] { p.ProcessName, p.Id.ToString(), p.StartTime.ToShortTimeString(), p.TotalProcessorTime.Duration().Hours.ToString() + ":" + p.TotalProcessorTime.Duration().Minutes.ToString() + ":" + p.TotalProcessorTime.Duration().Seconds.ToString(), (p.WorkingSet / 1024).ToString() + "k", (p.PeakWorkingSet / 1024).ToString() + "k", p.HandleCount.ToString(), p.Threads.Count.ToString() };
+                        string[] prcdetails = new string[] { p.ProcessName, p.Id.ToString(), p.StartTime.ToShortTimeString(), p.TotalProcessorTime.Duration().Hours.ToString() + ":" + p.TotalProcessorTime.Duration().Minutes.ToString() + ":" + p.TotalProcessorTime.Duration().Seconds.ToString(), (p.WorkingSet64 / 1024).ToString() + "k", (p.PeakWorkingSet64 / 1024).ToString() + "k", p.HandleCount.ToString(), p.Threads.Count.ToString() };
                         presentprocdetails.Add(prcdetails[1], prcdetails[0].ToString() + "#" + prcdetails[2].ToString() + "#" + prcdetails[3].ToString() + "#" + prcdetails[4].ToString() + "#" + prcdetails[5].ToString() + "#" + prcdetails[6].ToString() + "#" + prcdetails[7].ToString());
                         threadscount += p.Threads.Count;
                     }
@@ -90,7 +84,7 @@ namespace TaskManager
                         {
                             if (!lvprocesses.Contains(p.Id.ToString()))
                             {
-                                string[] newprcdetails = new string[] { p.ProcessName, p.Id.ToString(), p.StartTime.ToShortTimeString(), p.TotalProcessorTime.Duration().Hours.ToString() + ":" + p.TotalProcessorTime.Duration().Minutes.ToString() + ":" + p.TotalProcessorTime.Duration().Seconds.ToString(), (p.WorkingSet / 1024).ToString() + "k", (p.PeakWorkingSet / 1024).ToString() + "k", p.HandleCount.ToString(), p.Threads.Count.ToString() };
+                                string[] newprcdetails = new string[] { p.ProcessName, p.Id.ToString(), p.StartTime.ToShortTimeString(), p.TotalProcessorTime.Duration().Hours.ToString() + ":" + p.TotalProcessorTime.Duration().Minutes.ToString() + ":" + p.TotalProcessorTime.Duration().Seconds.ToString(), (p.WorkingSet64 / 1024).ToString() + "k", (p.PeakWorkingSet64 / 1024).ToString() + "k", p.HandleCount.ToString(), p.Threads.Count.ToString() };
                                 ListViewItem newprocess = new ListViewItem(newprcdetails);
                                 metroListView1.Items.Add(newprocess);
                             }
@@ -181,12 +175,6 @@ namespace TaskManager
         {
             InitializeComponent();
         }
-
-        private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void MainWindow_Load(object sender, EventArgs e)
         {
             timer1.Start();
@@ -197,20 +185,6 @@ namespace TaskManager
                 new System.Threading.TimerCallback(this.LoadAllProcesses);
             t = new System.Threading.Timer(timerDelegate, null, 1000, 1000);
         }
-        #endregion
-        /*#region Cleanup
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (components != null)
-                {
-                    components.Dispose();
-                }
-            }
-            base.Dispose(disposing);
-        }
-        #endregion*/
         private void timer1_Tick(object sender, EventArgs e)
         {
             float fcpu = pCPU.NextValue();
@@ -220,6 +194,6 @@ namespace TaskManager
             //metroProgressSpinner2.Value = (int)fram/1024/1024;
             //label2.Text = "Memory - " + ((int)fram/1024/1024).ToString() + "%";
         }
-
+        #endregion
     }
 }
