@@ -189,6 +189,7 @@ namespace TaskManager
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             mcname = ".";
             presentprocdetails = new Hashtable();
             LoadAllProcessesOnStartup();
@@ -210,5 +211,15 @@ namespace TaskManager
             base.Dispose(disposing);
         }
         #endregion*/
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            float fcpu = pCPU.NextValue();
+            metroProgressSpinner1.Value = (int)fcpu;
+            label1.Text = "CPU - " + ((int)fcpu).ToString() + "%";
+            //float fram = pRAM.NextValue();
+            //metroProgressSpinner2.Value = (int)fram/1024/1024;
+            //label2.Text = "Memory - " + ((int)fram/1024/1024).ToString() + "%";
+        }
+
     }
 }
