@@ -164,6 +164,7 @@ namespace TaskManager
         }
         private void SetProcessPriority(MenuItem item)
         {
+
         }
         private void LoadAllMemoryDetails(object temp)
         {
