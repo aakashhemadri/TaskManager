@@ -164,7 +164,32 @@ namespace TaskManager
         }
         private void SetProcessPriority(MenuItem item)
         {
-
+            try
+            {
+                int selectedpid = Convert.ToInt32(metroListView1.SelectedItems[0].SubItems[1].Text.ToString());
+                Process selectedprocess = Process.GetProcessById(selectedpid, mcname);
+                if (item.Text.ToUpper() == "HIGH")
+                    selectedprocess.PriorityClass = ProcessPriorityClass.High;
+                else if (item.Text.ToUpper() == "LOW")
+                    selectedprocess.PriorityClass = ProcessPriorityClass.Idle;
+                else if (item.Text.ToUpper() == "REAL-TIME")
+                    selectedprocess.PriorityClass = ProcessPriorityClass.RealTime;
+                else if (item.Text.ToUpper() == "ABOVE NORMAL")
+                    selectedprocess.PriorityClass = ProcessPriorityClass.AboveNormal;
+                else if (item.Text.ToUpper() == "BELOW NORMAL")
+                    selectedprocess.PriorityClass = ProcessPriorityClass.BelowNormal;
+                else if (item.Text.ToUpper() == "NORMAL")
+                    selectedprocess.PriorityClass = ProcessPriorityClass.Normal;
+                foreach (MenuItem mnuitem in menuItem10.MenuItems)
+                {
+                    mnuitem.Checked = false;
+                }
+                item.Checked = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void LoadAllMemoryDetails(object temp)
         {
@@ -186,6 +211,116 @@ namespace TaskManager
                 new System.Threading.TimerCallback(this.LoadAllProcesses);
             t = new System.Threading.Timer(timerDelegate, null, 1000, 1000);
         }
+
+        private void runToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RunNewTask form = new RunNewTask();
+            form.Show();
+        }
+
+        private void endProcessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (metroListView1.SelectedItems.Count >= 1)
+            {
+                try
+                {
+                    int selectedpid = Convert.ToInt32(metroListView1.SelectedItems[0].SubItems[1].Text.ToString());
+                    Process.GetProcessById(selectedpid, mcname).Kill();
+                }
+                catch
+                {
+                    erroccured = true;
+                }
+            }
+        }
+
+        private void eXitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*
+            if (metroTabControl1.SelectedIndex == 1)
+            {
+                System.Threading.TimerCallback timerDelegate =
+                    new System.Threading.TimerCallback(this.LoadAllMemoryDetails);
+                tclr = new System.Threading.Timer(timerDelegate, null, 0, 1000);
+            }
+            else
+            {
+                tclr.Dispose();
+            }
+            */
+        }
+
+        private void menuItem9_Click(object sender, EventArgs e)
+        {
+            endProcessToolStripMenuItem_Click(sender, e);
+        }
+
+        private void menuItem11_Click(object sender, System.EventArgs e)
+        {
+            SetProcessPriority(menuItem11);
+        }
+
+        private void menuItem15_Click(object sender, System.EventArgs e)
+        {
+            SetProcessPriority(menuItem15);
+        }
+
+        private void menuItem16_Click(object sender, System.EventArgs e)
+        {
+            SetProcessPriority(menuItem16);
+        }
+
+        private void menuItem12_Click(object sender, System.EventArgs e)
+        {
+            SetProcessPriority(menuItem12);
+        }
+        private void menuItem13_Click(object sender, System.EventArgs e)
+        {
+            SetProcessPriority(menuItem13);
+        }
+
+        private void menuItem14_Click(object sender, System.EventArgs e)
+        {
+            SetProcessPriority(menuItem14);
+        }
+
+        private void menuItem10_Popup(object sender, System.EventArgs e)
+        {
+            try
+            {
+                int selectedpid = Convert.ToInt32(metroListView1.SelectedItems[0].SubItems[1].Text.ToString());
+                Process selectedprocess = Process.GetProcessById(selectedpid, mcname);
+                string priority = selectedprocess.PriorityClass.ToString();
+                foreach (MenuItem mnuitem in menuItem10.MenuItems)
+                {
+                    string mnutext = mnuitem.Text.ToUpper().Replace(" ", "");
+                    if (mnutext == "LOW")
+                        mnutext = "IDLE";
+                    if (mnutext != priority.ToUpper())
+                        mnuitem.Checked = false;
+                    else
+                    {
+                        mnuitem.Checked = true;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void lvcxtmnu_Popup(object sender, EventArgs e)
+        {
+
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             float fcpu = pCPU.NextValue();

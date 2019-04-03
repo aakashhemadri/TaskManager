@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pCPU = new System.Diagnostics.PerformanceCounter();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,22 +59,57 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusProcesses = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusThreads = new System.Windows.Forms.ToolStripStatusLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pCPU = new System.Diagnostics.PerformanceCounter();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.endProcessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eXitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lvcxtmnu = new System.Windows.Forms.ContextMenu();
+            this.menuItem9 = new System.Windows.Forms.MenuItem();
+            this.menuItem10 = new System.Windows.Forms.MenuItem();
+            this.menuItem11 = new System.Windows.Forms.MenuItem();
+            this.menuItem15 = new System.Windows.Forms.MenuItem();
+            this.menuItem16 = new System.Windows.Forms.MenuItem();
+            this.menuItem12 = new System.Windows.Forms.MenuItem();
+            this.menuItem13 = new System.Windows.Forms.MenuItem();
+            this.menuItem14 = new System.Windows.Forms.MenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
+            this.metroPanel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
-            this.metroPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pCPU
+            // 
+            this.pCPU.CategoryName = "Processor";
+            this.pCPU.CounterName = "% Processor Time";
+            this.pCPU.InstanceName = "_Total";
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackgroundImage = global::TaskManager.Properties.Resources.bg2;
+            this.metroPanel1.Controls.Add(this.metroTabControl1);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 8;
+            this.metroPanel1.Location = new System.Drawing.Point(17, 95);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(828, 550);
+            this.metroPanel1.TabIndex = 7;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 8;
             // 
             // metroTabControl1
             // 
@@ -84,12 +122,13 @@
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(994, 662);
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(828, 550);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroTabControl1.TabIndex = 3;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.SelectedIndexChanged += new System.EventHandler(this.metroTabControl1_SelectedIndexChanged);
             // 
             // metroTabPage1
             // 
@@ -97,16 +136,17 @@
             this.metroTabPage1.Controls.Add(this.tableLayoutPanel1);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.HorizontalScrollbarSize = 8;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(986, 620);
+            this.metroTabPage1.Size = new System.Drawing.Size(820, 508);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Overview";
             this.metroTabPage1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.metroTabPage1.VerticalScrollbarSize = 8;
             // 
             // tableLayoutPanel1
             // 
@@ -126,14 +166,14 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 30);
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 25);
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(986, 620);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 508);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // label4
@@ -141,10 +181,9 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(725, 559);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(597, 458);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 31);
+            this.label4.Size = new System.Drawing.Size(36, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "CPU";
             // 
@@ -153,21 +192,19 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(240, 559);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(197, 458);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 31);
+            this.label3.Size = new System.Drawing.Size(16, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "+";
             // 
             // metroProgressSpinner4
             // 
             this.metroProgressSpinner4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroProgressSpinner4.Location = new System.Drawing.Point(622, 345);
-            this.metroProgressSpinner4.Margin = new System.Windows.Forms.Padding(4);
+            this.metroProgressSpinner4.Location = new System.Drawing.Point(517, 280);
             this.metroProgressSpinner4.Maximum = 100;
             this.metroProgressSpinner4.Name = "metroProgressSpinner4";
-            this.metroProgressSpinner4.Size = new System.Drawing.Size(234, 210);
+            this.metroProgressSpinner4.Size = new System.Drawing.Size(195, 175);
             this.metroProgressSpinner4.Spinning = false;
             this.metroProgressSpinner4.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroProgressSpinner4.TabIndex = 5;
@@ -177,11 +214,10 @@
             // metroProgressSpinner3
             // 
             this.metroProgressSpinner3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroProgressSpinner3.Location = new System.Drawing.Point(129, 345);
-            this.metroProgressSpinner3.Margin = new System.Windows.Forms.Padding(4);
+            this.metroProgressSpinner3.Location = new System.Drawing.Point(107, 280);
             this.metroProgressSpinner3.Maximum = 100;
             this.metroProgressSpinner3.Name = "metroProgressSpinner3";
-            this.metroProgressSpinner3.Size = new System.Drawing.Size(234, 210);
+            this.metroProgressSpinner3.Size = new System.Drawing.Size(195, 175);
             this.metroProgressSpinner3.Spinning = false;
             this.metroProgressSpinner3.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroProgressSpinner3.TabIndex = 4;
@@ -193,21 +229,19 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(717, 265);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(586, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 29);
+            this.label2.Size = new System.Drawing.Size(58, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Memory";
             // 
             // metroProgressSpinner2
             // 
             this.metroProgressSpinner2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroProgressSpinner2.Location = new System.Drawing.Point(622, 51);
-            this.metroProgressSpinner2.Margin = new System.Windows.Forms.Padding(4);
+            this.metroProgressSpinner2.Location = new System.Drawing.Point(517, 39);
             this.metroProgressSpinner2.Maximum = 100;
             this.metroProgressSpinner2.Name = "metroProgressSpinner2";
-            this.metroProgressSpinner2.Size = new System.Drawing.Size(234, 210);
+            this.metroProgressSpinner2.Size = new System.Drawing.Size(195, 175);
             this.metroProgressSpinner2.Spinning = false;
             this.metroProgressSpinner2.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroProgressSpinner2.TabIndex = 1;
@@ -217,11 +251,10 @@
             // metroProgressSpinner1
             // 
             this.metroProgressSpinner1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroProgressSpinner1.Location = new System.Drawing.Point(129, 51);
-            this.metroProgressSpinner1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroProgressSpinner1.Location = new System.Drawing.Point(107, 39);
             this.metroProgressSpinner1.Maximum = 100;
             this.metroProgressSpinner1.Name = "metroProgressSpinner1";
-            this.metroProgressSpinner1.Size = new System.Drawing.Size(234, 210);
+            this.metroProgressSpinner1.Size = new System.Drawing.Size(195, 175);
             this.metroProgressSpinner1.Spinning = false;
             this.metroProgressSpinner1.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroProgressSpinner1.TabIndex = 0;
@@ -233,10 +266,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(232, 265);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(187, 217);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 29);
+            this.label1.Size = new System.Drawing.Size(36, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "CPU";
             // 
@@ -246,16 +278,17 @@
             this.metroTabPage2.Controls.Add(this.metroListView1);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.HorizontalScrollbarSize = 8;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(986, 620);
+            this.metroTabPage2.Size = new System.Drawing.Size(820, 508);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Processes";
             this.metroTabPage2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.metroTabPage2.VerticalScrollbarSize = 8;
             // 
             // metroListView1
             // 
@@ -271,6 +304,7 @@
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
+            this.metroListView1.ContextMenu = this.lvcxtmnu;
             this.metroListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.metroListView1.FullRowSelect = true;
@@ -278,7 +312,7 @@
             this.metroListView1.Margin = new System.Windows.Forms.Padding(0);
             this.metroListView1.Name = "metroListView1";
             this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(986, 620);
+            this.metroListView1.Size = new System.Drawing.Size(820, 508);
             this.metroListView1.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroListView1.TabIndex = 2;
             this.metroListView1.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -333,45 +367,48 @@
             this.metroTabPage3.BackgroundImage = global::TaskManager.Properties.Resources.bg2;
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.HorizontalScrollbarSize = 8;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(986, 620);
+            this.metroTabPage3.Size = new System.Drawing.Size(820, 508);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "Performance";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 10;
+            this.metroTabPage3.VerticalScrollbarSize = 8;
             // 
             // metroTabPage4
             // 
             this.metroTabPage4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.HorizontalScrollbarSize = 8;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(986, 620);
+            this.metroTabPage4.Size = new System.Drawing.Size(820, 510);
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "metroTabPage4";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 10;
+            this.metroTabPage4.VerticalScrollbarSize = 8;
             // 
             // metroTabPage5
             // 
             this.metroTabPage5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.metroTabPage5.HorizontalScrollbarBarColor = true;
             this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.HorizontalScrollbarSize = 10;
+            this.metroTabPage5.HorizontalScrollbarSize = 8;
             this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(986, 620);
+            this.metroTabPage5.Size = new System.Drawing.Size(820, 510);
             this.metroTabPage5.TabIndex = 4;
             this.metroTabPage5.Text = "metroTabPage5";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
             this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.VerticalScrollbarSize = 10;
+            this.metroTabPage5.VerticalScrollbarSize = 8;
             // 
             // statusStrip
             // 
@@ -381,9 +418,10 @@
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusProcesses,
             this.statusThreads});
-            this.statusStrip.Location = new System.Drawing.Point(20, 775);
+            this.statusStrip.Location = new System.Drawing.Point(17, 645);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(994, 30);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip.Size = new System.Drawing.Size(828, 25);
             this.statusStrip.TabIndex = 5;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -391,42 +429,15 @@
             // 
             this.statusProcesses.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.statusProcesses.Name = "statusProcesses";
-            this.statusProcesses.Size = new System.Drawing.Size(89, 25);
+            this.statusProcesses.Size = new System.Drawing.Size(72, 20);
             this.statusProcesses.Text = "Processes";
             // 
             // statusThreads
             // 
             this.statusThreads.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.statusThreads.Name = "statusThreads";
-            this.statusThreads.Size = new System.Drawing.Size(74, 25);
+            this.statusThreads.Size = new System.Drawing.Size(61, 20);
             this.statusThreads.Text = "Threads";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pCPU
-            // 
-            this.pCPU.CategoryName = "Processor";
-            this.pCPU.CounterName = "% Processor Time";
-            this.pCPU.InstanceName = "_Total";
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackgroundImage = global::TaskManager.Properties.Resources.bg2;
-            this.metroPanel1.Controls.Add(this.metroTabControl1);
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(20, 113);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(994, 662);
-            this.metroPanel1.TabIndex = 7;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // menuStrip1
             // 
@@ -435,9 +446,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(20, 80);
+            this.menuStrip1.Location = new System.Drawing.Point(17, 67);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(994, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(828, 28);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -446,10 +458,11 @@
             this.fileToolStripMenuItem.BackgroundImage = global::TaskManager.Properties.Resources.bg2;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.runToolStripMenuItem,
+            this.endProcessToolStripMenuItem,
             this.eXitToolStripMenuItem});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.MediumOrchid;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // runToolStripMenuItem
@@ -458,8 +471,18 @@
             this.runToolStripMenuItem.BackgroundImage = global::TaskManager.Properties.Resources.bg2;
             this.runToolStripMenuItem.ForeColor = System.Drawing.Color.MediumOrchid;
             this.runToolStripMenuItem.Name = "runToolStripMenuItem";
-            this.runToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.runToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.runToolStripMenuItem.Text = "Run new task";
+            this.runToolStripMenuItem.Click += new System.EventHandler(this.runToolStripMenuItem_Click);
+            // 
+            // endProcessToolStripMenuItem
+            // 
+            this.endProcessToolStripMenuItem.BackgroundImage = global::TaskManager.Properties.Resources.bg2;
+            this.endProcessToolStripMenuItem.ForeColor = System.Drawing.Color.MediumOrchid;
+            this.endProcessToolStripMenuItem.Name = "endProcessToolStripMenuItem";
+            this.endProcessToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.endProcessToolStripMenuItem.Text = "End Process";
+            this.endProcessToolStripMenuItem.Click += new System.EventHandler(this.endProcessToolStripMenuItem_Click);
             // 
             // eXitToolStripMenuItem
             // 
@@ -467,24 +490,89 @@
             this.eXitToolStripMenuItem.BackgroundImage = global::TaskManager.Properties.Resources.bg2;
             this.eXitToolStripMenuItem.ForeColor = System.Drawing.Color.MediumOrchid;
             this.eXitToolStripMenuItem.Name = "eXitToolStripMenuItem";
-            this.eXitToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.eXitToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.eXitToolStripMenuItem.Text = "Exit";
+            this.eXitToolStripMenuItem.Click += new System.EventHandler(this.eXitToolStripMenuItem_Click);
+            // 
+            // lvcxtmnu
+            // 
+            this.lvcxtmnu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem9,
+            this.menuItem10});
+            this.lvcxtmnu.Popup += new System.EventHandler(this.lvcxtmnu_Popup);
+            // 
+            // menuItem9
+            // 
+            this.menuItem9.Index = 0;
+            this.menuItem9.Text = "End Process";
+            this.menuItem9.Click += new System.EventHandler(this.menuItem9_Click);
+            // 
+            // menuItem10
+            // 
+            this.menuItem10.Index = 1;
+            this.menuItem10.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem11,
+            this.menuItem15,
+            this.menuItem16,
+            this.menuItem12,
+            this.menuItem13,
+            this.menuItem14});
+            this.menuItem10.Text = "Set Priority";
+            // 
+            // menuItem11
+            // 
+            this.menuItem11.Index = 0;
+            this.menuItem11.RadioCheck = true;
+            this.menuItem11.Text = "High";
+            // 
+            // menuItem15
+            // 
+            this.menuItem15.Index = 1;
+            this.menuItem15.RadioCheck = true;
+            this.menuItem15.Text = "Above Normal";
+            // 
+            // menuItem16
+            // 
+            this.menuItem16.Index = 2;
+            this.menuItem16.RadioCheck = true;
+            this.menuItem16.Text = "Below Normal";
+            // 
+            // menuItem12
+            // 
+            this.menuItem12.Index = 3;
+            this.menuItem12.RadioCheck = true;
+            this.menuItem12.Text = "Normal";
+            // 
+            // menuItem13
+            // 
+            this.menuItem13.Index = 4;
+            this.menuItem13.RadioCheck = true;
+            this.menuItem13.Text = "Low";
+            // 
+            // menuItem14
+            // 
+            this.menuItem14.Index = 5;
+            this.menuItem14.RadioCheck = true;
+            this.menuItem14.Text = "Real Time";
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1034, 825);
+            this.ClientSize = new System.Drawing.Size(862, 687);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainWindow";
-            this.Padding = new System.Windows.Forms.Padding(20, 80, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(17, 67, 17, 17);
             this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "TaskManager";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.MainWindow_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
+            this.metroPanel1.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -492,8 +580,6 @@
             this.metroTabPage2.ResumeLayout(false);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
-            this.metroPanel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -537,5 +623,15 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eXitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem endProcessToolStripMenuItem;
+        private System.Windows.Forms.ContextMenu lvcxtmnu;
+        private System.Windows.Forms.MenuItem menuItem9;
+        private System.Windows.Forms.MenuItem menuItem10;
+        private System.Windows.Forms.MenuItem menuItem11;
+        private System.Windows.Forms.MenuItem menuItem15;
+        private System.Windows.Forms.MenuItem menuItem16;
+        private System.Windows.Forms.MenuItem menuItem12;
+        private System.Windows.Forms.MenuItem menuItem13;
+        private System.Windows.Forms.MenuItem menuItem14;
     }
 }
