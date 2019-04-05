@@ -11,6 +11,7 @@ namespace TaskManager
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static int c;
         [STAThread]
         static void Main()
         {
