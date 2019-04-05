@@ -29,15 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,6 +69,15 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.darkButton6 = new DarkUI.Controls.DarkButton();
+            this.darkButton5 = new DarkUI.Controls.DarkButton();
+            this.darkButton4 = new DarkUI.Controls.DarkButton();
+            this.darkButton3 = new DarkUI.Controls.DarkButton();
+            this.darkButton2 = new DarkUI.Controls.DarkButton();
+            this.darkButton1 = new DarkUI.Controls.DarkButton();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
@@ -67,29 +85,28 @@
             this.statusThreads = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pCPU = new System.Diagnostics.PerformanceCounter();
-            this.darkButton1 = new DarkUI.Controls.DarkButton();
-            this.darkButton2 = new DarkUI.Controls.DarkButton();
-            this.darkButton3 = new DarkUI.Controls.DarkButton();
-            this.darkButton4 = new DarkUI.Controls.DarkButton();
-            this.darkButton5 = new DarkUI.Controls.DarkButton();
-            this.darkButton6 = new DarkUI.Controls.DarkButton();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pRAM = new System.Diagnostics.PerformanceCounter();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pWifi = new System.Diagnostics.PerformanceCounter();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pDisk = new System.Diagnostics.PerformanceCounter();
+            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pWifi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDisk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -117,7 +134,7 @@
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 8;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabPage1.Name = "metroTabPage1";
             this.metroTabPage1.Size = new System.Drawing.Size(1301, 740);
             this.metroTabPage1.TabIndex = 0;
@@ -253,7 +270,7 @@
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 8;
             this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabPage2.Name = "metroTabPage2";
             this.metroTabPage2.Size = new System.Drawing.Size(1301, 740);
             this.metroTabPage2.TabIndex = 1;
@@ -279,7 +296,7 @@
             this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.metroListView1.FullRowSelect = true;
             this.metroListView1.Location = new System.Drawing.Point(0, 0);
-            this.metroListView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroListView1.Margin = new System.Windows.Forms.Padding(2);
             this.metroListView1.Name = "metroListView1";
             this.metroListView1.OwnerDraw = true;
             this.metroListView1.Size = new System.Drawing.Size(1301, 740);
@@ -331,6 +348,9 @@
             // 
             // metroTabPage3
             // 
+            this.metroTabPage3.Controls.Add(this.chart6);
+            this.metroTabPage3.Controls.Add(this.chart5);
+            this.metroTabPage3.Controls.Add(this.chart4);
             this.metroTabPage3.Controls.Add(this.chart3);
             this.metroTabPage3.Controls.Add(this.chart2);
             this.metroTabPage3.Controls.Add(this.chart1);
@@ -344,7 +364,7 @@
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 8;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabPage3.Name = "metroTabPage3";
             this.metroTabPage3.Size = new System.Drawing.Size(1301, 740);
             this.metroTabPage3.TabIndex = 2;
@@ -354,15 +374,198 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 8;
             // 
+            // chart3
+            // 
+            this.chart3.BackColor = System.Drawing.Color.Transparent;
+            this.chart3.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
+            this.chart3.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.chart3.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea9.AxisX.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea9.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea9.AxisY.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea9.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea9.BackColor = System.Drawing.Color.Transparent;
+            chartArea9.BorderColor = System.Drawing.Color.DarkGray;
+            chartArea9.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chart3.Legends.Add(legend9);
+            this.chart3.Location = new System.Drawing.Point(226, 25);
+            this.chart3.Name = "chart3";
+            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart3.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DeepSkyBlue};
+            series9.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
+            series9.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series9.IsVisibleInLegend = false;
+            series9.Legend = "Legend1";
+            series9.Name = "CPU";
+            series9.ShadowColor = System.Drawing.Color.LightGray;
+            this.chart3.Series.Add(series9);
+            this.chart3.Size = new System.Drawing.Size(787, 300);
+            this.chart3.TabIndex = 10;
+            this.chart3.Text = "chart3";
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.Color.Transparent;
+            this.chart2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
+            this.chart2.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.chart2.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea10.AxisX.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea10.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea10.AxisY.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea10.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea10.BackColor = System.Drawing.Color.Transparent;
+            chartArea10.BorderColor = System.Drawing.Color.DarkGray;
+            chartArea10.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart2.Legends.Add(legend10);
+            this.chart2.Location = new System.Drawing.Point(226, 25);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart2.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DeepSkyBlue};
+            series10.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
+            series10.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series10.IsVisibleInLegend = false;
+            series10.Legend = "Legend1";
+            series10.Name = "CPU";
+            series10.ShadowColor = System.Drawing.Color.LightGray;
+            this.chart2.Series.Add(series10);
+            this.chart2.Size = new System.Drawing.Size(787, 300);
+            this.chart2.TabIndex = 9;
+            this.chart2.Text = "chart2";
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Transparent;
+            this.chart1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
+            this.chart1.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.chart1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea11.AxisX.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea11.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea11.AxisY.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea11.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea11.BackColor = System.Drawing.Color.Transparent;
+            chartArea11.BorderColor = System.Drawing.Color.DarkGray;
+            chartArea11.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart1.Legends.Add(legend11);
+            this.chart1.Location = new System.Drawing.Point(244, 25);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DeepSkyBlue};
+            series11.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
+            series11.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series11.IsVisibleInLegend = false;
+            series11.Legend = "Legend1";
+            series11.Name = "CPU";
+            series11.ShadowColor = System.Drawing.Color.LightGray;
+            this.chart1.Series.Add(series11);
+            this.chart1.Size = new System.Drawing.Size(787, 300);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
+            // 
+            // darkButton6
+            // 
+            this.darkButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.darkButton6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkButton6.ForeColor = System.Drawing.Color.LightGray;
+            this.darkButton6.Location = new System.Drawing.Point(3, 413);
+            this.darkButton6.Name = "darkButton6";
+            this.darkButton6.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton6.Size = new System.Drawing.Size(193, 76);
+            this.darkButton6.TabIndex = 7;
+            this.darkButton6.Text = "GPU";
+            this.darkButton6.Click += new System.EventHandler(this.darkButton6_Click);
+            // 
+            // darkButton5
+            // 
+            this.darkButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.darkButton5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkButton5.ForeColor = System.Drawing.Color.LightGray;
+            this.darkButton5.Location = new System.Drawing.Point(3, 331);
+            this.darkButton5.Name = "darkButton5";
+            this.darkButton5.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton5.Size = new System.Drawing.Size(193, 76);
+            this.darkButton5.TabIndex = 6;
+            this.darkButton5.Text = "Wi-Fi";
+            this.darkButton5.Click += new System.EventHandler(this.darkButton5_Click);
+            // 
+            // darkButton4
+            // 
+            this.darkButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.darkButton4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkButton4.ForeColor = System.Drawing.Color.LightGray;
+            this.darkButton4.Location = new System.Drawing.Point(3, 249);
+            this.darkButton4.Name = "darkButton4";
+            this.darkButton4.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton4.Size = new System.Drawing.Size(193, 76);
+            this.darkButton4.TabIndex = 5;
+            this.darkButton4.Text = "Ethernet";
+            this.darkButton4.Click += new System.EventHandler(this.darkButton4_Click);
+            // 
+            // darkButton3
+            // 
+            this.darkButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.darkButton3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkButton3.ForeColor = System.Drawing.Color.LightGray;
+            this.darkButton3.Location = new System.Drawing.Point(3, 167);
+            this.darkButton3.Name = "darkButton3";
+            this.darkButton3.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton3.Size = new System.Drawing.Size(193, 76);
+            this.darkButton3.TabIndex = 4;
+            this.darkButton3.Text = "Disk";
+            this.darkButton3.Click += new System.EventHandler(this.darkButton3_Click);
+            // 
+            // darkButton2
+            // 
+            this.darkButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.darkButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkButton2.ForeColor = System.Drawing.Color.LightGray;
+            this.darkButton2.Location = new System.Drawing.Point(3, 85);
+            this.darkButton2.Name = "darkButton2";
+            this.darkButton2.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton2.Size = new System.Drawing.Size(193, 76);
+            this.darkButton2.TabIndex = 3;
+            this.darkButton2.Text = "Memory";
+            this.darkButton2.Click += new System.EventHandler(this.darkButton2_Click);
+            // 
+            // darkButton1
+            // 
+            this.darkButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.darkButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkButton1.ForeColor = System.Drawing.Color.LightGray;
+            this.darkButton1.Location = new System.Drawing.Point(3, 3);
+            this.darkButton1.Name = "darkButton1";
+            this.darkButton1.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton1.Size = new System.Drawing.Size(193, 76);
+            this.darkButton1.TabIndex = 2;
+            this.darkButton1.Text = "CPU";
+            this.darkButton1.Click += new System.EventHandler(this.darkButton1_Click);
+            // 
             // metroTabPage4
             // 
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.HorizontalScrollbarSize = 8;
             this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(1302, 740);
+            this.metroTabPage4.Size = new System.Drawing.Size(1301, 740);
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "metroTabPage4";
             this.metroTabPage4.VerticalScrollbarBarColor = true;
@@ -375,9 +578,9 @@
             this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage5.HorizontalScrollbarSize = 8;
             this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroTabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1302, 740);
+            this.metroTabPage5.Size = new System.Drawing.Size(1301, 740);
             this.metroTabPage5.TabIndex = 4;
             this.metroTabPage5.Text = "metroTabPage5";
             this.metroTabPage5.VerticalScrollbarBarColor = true;
@@ -425,195 +628,126 @@
             this.pCPU.CounterName = "% Processor Time";
             this.pCPU.InstanceName = "_Total";
             // 
-            // darkButton1
-            // 
-            this.darkButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.darkButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkButton1.ForeColor = System.Drawing.Color.LightGray;
-            this.darkButton1.Location = new System.Drawing.Point(3, 3);
-            this.darkButton1.Name = "darkButton1";
-            this.darkButton1.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton1.Size = new System.Drawing.Size(193, 76);
-            this.darkButton1.TabIndex = 2;
-            this.darkButton1.Text = "CPU";
-            this.darkButton1.Click += new System.EventHandler(this.darkButton1_Click);
-            // 
-            // darkButton2
-            // 
-            this.darkButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.darkButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkButton2.ForeColor = System.Drawing.Color.LightGray;
-            this.darkButton2.Location = new System.Drawing.Point(3, 85);
-            this.darkButton2.Name = "darkButton2";
-            this.darkButton2.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton2.Size = new System.Drawing.Size(193, 76);
-            this.darkButton2.TabIndex = 3;
-            this.darkButton2.Text = "Memory";
-            this.darkButton2.Click += new System.EventHandler(this.darkButton2_Click);
-            // 
-            // darkButton3
-            // 
-            this.darkButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.darkButton3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkButton3.ForeColor = System.Drawing.Color.LightGray;
-            this.darkButton3.Location = new System.Drawing.Point(3, 167);
-            this.darkButton3.Name = "darkButton3";
-            this.darkButton3.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton3.Size = new System.Drawing.Size(193, 76);
-            this.darkButton3.TabIndex = 4;
-            this.darkButton3.Text = "Disk";
-            // 
-            // darkButton4
-            // 
-            this.darkButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.darkButton4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkButton4.ForeColor = System.Drawing.Color.LightGray;
-            this.darkButton4.Location = new System.Drawing.Point(3, 249);
-            this.darkButton4.Name = "darkButton4";
-            this.darkButton4.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton4.Size = new System.Drawing.Size(193, 76);
-            this.darkButton4.TabIndex = 5;
-            this.darkButton4.Text = "Ethernet";
-            // 
-            // darkButton5
-            // 
-            this.darkButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.darkButton5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkButton5.ForeColor = System.Drawing.Color.LightGray;
-            this.darkButton5.Location = new System.Drawing.Point(3, 331);
-            this.darkButton5.Name = "darkButton5";
-            this.darkButton5.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton5.Size = new System.Drawing.Size(193, 76);
-            this.darkButton5.TabIndex = 6;
-            this.darkButton5.Text = "Wi-Fi";
-            this.darkButton5.Click += new System.EventHandler(this.darkButton5_Click);
-            // 
-            // darkButton6
-            // 
-            this.darkButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.darkButton6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkButton6.ForeColor = System.Drawing.Color.LightGray;
-            this.darkButton6.Location = new System.Drawing.Point(3, 413);
-            this.darkButton6.Name = "darkButton6";
-            this.darkButton6.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton6.Size = new System.Drawing.Size(193, 76);
-            this.darkButton6.TabIndex = 7;
-            this.darkButton6.Text = "GPU";
-            // 
-            // chart1
-            // 
-            this.chart1.BackColor = System.Drawing.Color.Transparent;
-            this.chart1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
-            this.chart1.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            this.chart1.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea11.AxisX.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea11.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea11.AxisY.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea11.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea11.BackColor = System.Drawing.Color.Transparent;
-            chartArea11.BorderColor = System.Drawing.Color.DarkGray;
-            chartArea11.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart1.Legends.Add(legend11);
-            this.chart1.Location = new System.Drawing.Point(244, 25);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart1.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.DeepSkyBlue};
-            series11.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
-            series11.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series11.IsVisibleInLegend = false;
-            series11.Legend = "Legend1";
-            series11.Name = "CPU";
-            series11.ShadowColor = System.Drawing.Color.LightGray;
-            this.chart1.Series.Add(series11);
-            this.chart1.Size = new System.Drawing.Size(787, 300);
-            this.chart1.TabIndex = 8;
-            this.chart1.Text = "chart1";
-            // 
             // pRAM
             // 
             this.pRAM.CategoryName = "Memory";
             this.pRAM.CounterName = "% Committed Bytes In Use";
-            // 
-            // chart2
-            // 
-            this.chart2.BackColor = System.Drawing.Color.Transparent;
-            this.chart2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
-            this.chart2.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            this.chart2.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea12.AxisX.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea12.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea12.AxisY.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea12.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea12.BackColor = System.Drawing.Color.Transparent;
-            chartArea12.BorderColor = System.Drawing.Color.DarkGray;
-            chartArea12.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart2.Legends.Add(legend12);
-            this.chart2.Location = new System.Drawing.Point(226, 25);
-            this.chart2.Name = "chart2";
-            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart2.PaletteCustomColors = new System.Drawing.Color[] {
-        System.Drawing.Color.DeepSkyBlue};
-            series12.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
-            series12.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series12.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series12.IsVisibleInLegend = false;
-            series12.Legend = "Legend1";
-            series12.Name = "CPU";
-            series12.ShadowColor = System.Drawing.Color.LightGray;
-            this.chart2.Series.Add(series12);
-            this.chart2.Size = new System.Drawing.Size(787, 300);
-            this.chart2.TabIndex = 9;
-            this.chart2.Text = "chart2";
             // 
             // pWifi
             // 
             this.pWifi.CategoryName = "TCPv4";
             this.pWifi.CounterName = "Segments Sent/sec";
             // 
-            // chart3
+            // chart4
             // 
-            this.chart3.BackColor = System.Drawing.Color.Transparent;
-            this.chart3.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
-            this.chart3.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            this.chart3.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea13.AxisX.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea13.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea13.AxisY.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea13.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
-            chartArea13.BackColor = System.Drawing.Color.Transparent;
-            chartArea13.BorderColor = System.Drawing.Color.DarkGray;
-            chartArea13.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.chart3.Legends.Add(legend13);
-            this.chart3.Location = new System.Drawing.Point(226, 25);
-            this.chart3.Name = "chart3";
-            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            this.chart3.PaletteCustomColors = new System.Drawing.Color[] {
+            this.chart4.BackColor = System.Drawing.Color.Transparent;
+            this.chart4.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
+            this.chart4.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.chart4.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea8.AxisX.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea8.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea8.AxisY.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea8.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea8.BackColor = System.Drawing.Color.Transparent;
+            chartArea8.BorderColor = System.Drawing.Color.DarkGray;
+            chartArea8.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart4.Legends.Add(legend8);
+            this.chart4.Location = new System.Drawing.Point(226, 25);
+            this.chart4.Name = "chart4";
+            this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart4.PaletteCustomColors = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue};
-            series13.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
-            series13.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series13.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series13.IsVisibleInLegend = false;
-            series13.Legend = "Legend1";
-            series13.Name = "CPU";
-            series13.ShadowColor = System.Drawing.Color.LightGray;
-            this.chart3.Series.Add(series13);
-            this.chart3.Size = new System.Drawing.Size(787, 300);
-            this.chart3.TabIndex = 10;
-            this.chart3.Text = "chart3";
+            series8.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
+            series8.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series8.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series8.IsVisibleInLegend = false;
+            series8.Legend = "Legend1";
+            series8.Name = "CPU";
+            series8.ShadowColor = System.Drawing.Color.LightGray;
+            this.chart4.Series.Add(series8);
+            this.chart4.Size = new System.Drawing.Size(787, 300);
+            this.chart4.TabIndex = 11;
+            this.chart4.Text = "chart4";
+            // 
+            // pDisk
+            // 
+            this.pDisk.CategoryName = "PhysicalDisk";
+            this.pDisk.CounterName = "Disk Writes/sec";
+            this.pDisk.InstanceName = "_Total";
+            // 
+            // chart5
+            // 
+            this.chart5.BackColor = System.Drawing.Color.Transparent;
+            this.chart5.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
+            this.chart5.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.chart5.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea7.AxisX.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea7.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea7.AxisY.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea7.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea7.BackColor = System.Drawing.Color.Transparent;
+            chartArea7.BorderColor = System.Drawing.Color.DarkGray;
+            chartArea7.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart5.Legends.Add(legend7);
+            this.chart5.Location = new System.Drawing.Point(226, 25);
+            this.chart5.Name = "chart5";
+            this.chart5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart5.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DeepSkyBlue};
+            series7.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
+            series7.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series7.IsVisibleInLegend = false;
+            series7.Legend = "Legend1";
+            series7.Name = "CPU";
+            series7.ShadowColor = System.Drawing.Color.LightGray;
+            this.chart5.Series.Add(series7);
+            this.chart5.Size = new System.Drawing.Size(787, 300);
+            this.chart5.TabIndex = 12;
+            this.chart5.Text = "chart5";
+            // 
+            // chart6
+            // 
+            this.chart6.BackColor = System.Drawing.Color.Transparent;
+            this.chart6.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DarkVertical;
+            this.chart6.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            this.chart6.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea6.AxisX.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea6.AxisX2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea6.AxisY.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea6.AxisY2.TitleForeColor = System.Drawing.Color.Silver;
+            chartArea6.BackColor = System.Drawing.Color.Transparent;
+            chartArea6.BorderColor = System.Drawing.Color.DarkGray;
+            chartArea6.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart6.Legends.Add(legend6);
+            this.chart6.Location = new System.Drawing.Point(226, 25);
+            this.chart6.Name = "chart6";
+            this.chart6.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chart6.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.DeepSkyBlue};
+            series6.BackImage = "C:\\Users\\ADITHYA-PC\\Pictures\\Screenshots\\BG.png";
+            series6.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.IsVisibleInLegend = false;
+            series6.Legend = "Legend1";
+            series6.Name = "CPU";
+            series6.ShadowColor = System.Drawing.Color.LightGray;
+            this.chart6.Series.Add(series6);
+            this.chart6.Size = new System.Drawing.Size(787, 300);
+            this.chart6.TabIndex = 13;
+            this.chart6.Text = "chart6";
             // 
             // MainWindow
             // 
@@ -623,7 +757,7 @@
             this.ClientSize = new System.Drawing.Size(1343, 866);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.metroTabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainWindow";
             this.Padding = new System.Windows.Forms.Padding(17, 67, 17, 17);
             this.Text = "TaskManager";
@@ -635,14 +769,18 @@
             this.tableLayoutPanel1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pCPU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRAM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pWifi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pDisk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -690,5 +828,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Diagnostics.PerformanceCounter pWifi;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
+        private System.Diagnostics.PerformanceCounter pDisk;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
     }
 }

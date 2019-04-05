@@ -212,6 +212,21 @@ namespace TaskManager
         {
             Program.c = 5;
         }
+
+        private void darkButton3_Click(object sender, EventArgs e)
+        {
+            Program.c = 3;
+        }
+
+        private void darkButton4_Click(object sender, EventArgs e)
+        {
+            Program.c = 4;
+        }
+
+        private void darkButton6_Click(object sender, EventArgs e)
+        {
+            Program.c = 6;
+        }
         #endregion
         /*#region Cleanup
         protected override void Dispose(bool disposing)
@@ -231,12 +246,20 @@ namespace TaskManager
             float fcpu = pCPU.NextValue();
             float fram = pRAM.NextValue();
             float fwifi = pWifi.NextValue();
+            float fdisk = pDisk.NextValue();
+            float fether = 1;
+            float fgpu = 1;
             metroProgressSpinner1.Value = (int)fcpu;
             metroProgressSpinner2.Value = (int)fram;
-            metroProgressSpinner3.Value = (int)fwifi;
+            metroProgressSpinner3.Value = (int)fwifi%100;
+            metroProgressSpinner4.Value = (int)fdisk % 100;
             label1.Text = "CPU - " + ((int)fcpu).ToString() + "%";
             label2.Text = "Memory - " + ((int)fram).ToString() + "%";
             label3.Text = "Wi-Fi - " + ((int)fwifi).ToString() + "%";
+            label4.Text = "Disk - " + ((int)fwifi).ToString() + "%";
+            chart6.Visible = false;
+            chart5.Visible = false;
+            chart4.Visible = false;
             chart3.Visible = false;
             chart2.Visible = false;
             chart1.Series["CPU"].Points.AddY(fcpu);
@@ -264,6 +287,36 @@ namespace TaskManager
                 chart2.Visible = false;
                 chart3.Visible = true;
                 chart3.Series["CPU"].Points.AddY(fwifi);
+            }
+            else if (Program.c == 3)
+            {
+                //chart1.Refresh();
+                chart1.Visible = false;
+                chart2.Visible = false;
+                chart3.Visible = false;
+                chart4.Visible = true;
+                chart4.Series["CPU"].Points.AddY(fdisk);
+            }
+            else if (Program.c == 4)
+            {
+                //chart1.Refresh();
+                chart1.Visible = false;
+                chart2.Visible = false;
+                chart3.Visible = false;
+                chart4.Visible = false;
+                chart5.Visible = true;
+                chart5.Series["CPU"].Points.AddY(fether);
+            }
+            else if (Program.c == 6)
+            {
+                //chart1.Refresh();
+                chart1.Visible = false;
+                chart2.Visible = false;
+                chart3.Visible = false;
+                chart4.Visible = false;
+                chart5.Visible = false;
+                chart6.Visible = true;
+                chart6.Series["CPU"].Points.AddY(fgpu);
             }
             //float fram = pRAM.NextValue();
             //metroProgressSpinner2.Value = (int)fram/1024/1024;
